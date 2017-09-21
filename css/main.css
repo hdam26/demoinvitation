@@ -639,3 +639,14 @@ nav.navbar.navbar-light.navbar-toggleable-sm.bg-faded.justify-content-center.fix
         page-break-after: avoid;
     }
 }
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+	.bcg {
+		text-align: center;
+	}
+	.paraContainer {
+		width: 80%;
+		margin: auto;
+	}
+}
