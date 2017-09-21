@@ -641,11 +641,12 @@ nav.navbar.navbar-light.navbar-toggleable-sm.bg-faded.justify-content-center.fix
 }
 
 /* RESPONSIVE */
-@media (max-width: 960px) {
+@media (max-width: 920px) {
 	.bcg {
 		text-align: center;
 	}
 	.paraContainer {
+		max-width: 800px;
 		width: 80%;
 		margin: auto;
 	}
