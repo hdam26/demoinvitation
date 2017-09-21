@@ -24,12 +24,14 @@ var navbarBackground = function(scroll_start = 0) {
 			scroll_start = $(this).scrollTop();
 			if (scroll_start > _offset.top) {
 				$('.navbar.fixed-top').css('background-color', '#fff');
+				$('.navbar.fixed-top').css('box-shadow', '2px 2px 5px #888888');
 				$('.navbar.fixed-top').css('max-height', '60px');
 				$('.navbar .navbar-brand').css('color', '#DAAEA1');
 				$('.navbar .navbar-brand').css('font-size', '30px');
 				$('.navbar .nav-link').css('color', '#DAAEA1');
 			} else {
 				$('.navbar.fixed-top').css('background-color', 'transparent');
+				$('.navbar.fixed-top').css('box-shadow', 'none');
 				$('.navbar.fixed-top').css('max-height', '70px');
 				$('.navbar .navbar-brand').css('color', 'rgba(0,0,0,.5)');
 				$('.navbar .navbar-brand').css('font-size', '35px');

@@ -163,12 +163,49 @@ main {
 	width: 100%;
 }
 
-.hsContainer {
+.hsContainer{
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
 	position: relative;
 }
+
+.paraContainer {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	text-align: center;
+}
+
+.paraContent {
+	max-width: 700px;
+	margin: auto;
+}
+	.paraContent .coupleName {
+		display: flex;
+		flex-direction: row;
+	}
+	.paraContent h2  {
+		color: #fff8de;
+		background-color: rgba(0,0,0,0.5);
+		padding: 10px 5px;
+		font-size: 35px;
+		line-height: 37px;
+		margin-bottom: 12px;
+		height: 60px;
+	}
+	.paraContent p {
+		width: 400px;
+		color: #b2b2b2;
+	}
+	.paraContent a {
+		color: #b2b2b2;
+		text-decoration: underline;
+	}
 
 .hsContent {
 	max-width: 700px;
@@ -392,11 +429,11 @@ nav.navbar.navbar-light.navbar-toggleable-sm.bg-faded.justify-content-center.fix
 }
 .fadeIn {
 	opacity: 0;
-	animation: fadeIn .5s ease-in 1 forwards;
+	animation: fadeIn .3s ease-in 1 forwards;
 }
 .fadeOut {
 	opacity: 0;
-	animation: fadeOut .5s ease-in 1 forwards;
+	animation: fadeOut .3s ease-in 1 forwards;
 }
 
 /* ==========================================================================
