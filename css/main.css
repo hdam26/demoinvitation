@@ -2,6 +2,8 @@
 	/* Font's Source
 		Affectionately Yours: mistifonts.com
 		Mf Kind & Witty: mistifonts.com
+		Alex-Brush: 1001fonts.com
+		Inkcalig: 1001fonts.com
 	*/
 	
 @font-face {
@@ -11,6 +13,14 @@
 @font-face {
 	font-family: MfKind;
 	src: url('../etc/Mf Kind & Witty.ttf');
+}
+@font-face {
+	font-family: AlexBrush;
+	src: url('../etc/AlexBrush-Regular.ttf');
+}
+@font-face {
+	font-family: Inkcalig;
+	src: url('../etc/Inkcalig.ttf');
 }
 
 	/* Typicons */
@@ -161,6 +171,7 @@ main {
 	background-size: cover;
 	height: 100%;
 	width: 100%;
+	text-align: center;
 }
 
 .hsContainer{
@@ -171,7 +182,8 @@ main {
 }
 
 .paraContainer {
-	width: 100%;
+	width: 80%;
+	margin: auto;
 	height: 100%;
 	overflow: hidden;
 	position: relative;
@@ -189,7 +201,11 @@ main {
 		display: flex;
 		flex-direction: row;
 	}
-	.paraContent h2  {
+	.paraContent p {
+		width: 400px;
+		color: #b2b2b2;
+	}
+	.paraContent .introName {
 		color: #fff8de;
 		background-color: rgba(0,0,0,0.5);
 		padding: 10px 5px;
@@ -198,9 +214,8 @@ main {
 		margin-bottom: 12px;
 		height: 60px;
 	}
-	.paraContent p {
-		width: 400px;
-		color: #b2b2b2;
+	.paraContent .introSubTitle {
+		font-size: 30px;
 	}
 	.paraContent a {
 		color: #b2b2b2;
@@ -357,6 +372,9 @@ nav.navbar.navbar-light.navbar-toggleable-sm.bg-faded.justify-content-center.fix
 .homeSlide p {
 	color: #fff;
 }
+.storyOf, .storyText {
+	font-family: Inkcalig;
+}
 
 /* Misc */
 .coupleIntro {
@@ -405,6 +423,10 @@ nav.navbar.navbar-light.navbar-toggleable-sm.bg-faded.justify-content-center.fix
 	display: block;
 	margin: auto;
 }
+.title {
+	font-family: AlexBrush;
+	text-transform: Capitalize;
+}
 .storyBox {
 	display: flex;
 	justify-content: center;
@@ -416,6 +438,15 @@ nav.navbar.navbar-light.navbar-toggleable-sm.bg-faded.justify-content-center.fix
 }
 .storyTextRight {
 	text-align: right;
+}
+.storyTextCenter {
+	text-align: center;
+}
+.additionalText {
+	display: none;
+}
+.hiddenStory {
+	display: none;
 }
 .storyPicContainer {
 	display: flex;
@@ -439,7 +470,7 @@ nav.navbar.navbar-light.navbar-toggleable-sm.bg-faded.justify-content-center.fix
 /* ==========================================================================
    Flex classes
    ========================================================================== */
-.flexContainer{
+.flexContainer {
 	display: flex;
 	display: -webkit-flex;
 	flex-direction: row;
@@ -448,6 +479,9 @@ nav.navbar.navbar-light.navbar-toggleable-sm.bg-faded.justify-content-center.fix
 	-webkit-flex-wrap: wrap;
 	justify-content: flex-start;
 	-webkit-justify-content: flex-start;
+	text-align: center;
+	margin: auto;
+	width: 80%;	
 }
 	
 /* ==========================================================================
@@ -641,13 +675,134 @@ nav.navbar.navbar-light.navbar-toggleable-sm.bg-faded.justify-content-center.fix
 }
 
 /* RESPONSIVE */
-@media (max-width: 920px) {
-	.bcg {
-		text-align: center;
+@media screen and (max-width: 920px) {
+	.paraContainer, .flexContainer, .title {		
+		margin-left: 8%;
 	}
-	.paraContainer {
-		max-width: 800px;
-		width: 80%;
-		margin: auto;
+	.paraContent .mainTitle {
+		font-size: 30px;
+	}
+	.paraContent .introName {
+		font-size: 30px;
+	}
+	.paraContent .introSubTitle {
+		font-size: 20px;
+	}
+}
+@media screen and (min-width: 820px) and (max-width: 870px) {
+	.paraContainer, .flexContainer, .title {		
+		margin-left: 4%;
+	}
+}
+@media screen and (min-width: 770px) and (max-width: 819px) {
+	.paraContainer, .flexContainer, .title {		
+		margin-left: 2%;
+	}
+}
+@media screen and (max-width: 769px) {
+	.paraContainer, .flexContainer, .title {		
+		width: 70%;
+		margin-left: 5%;
+	}
+}
+@media screen and (max-width: 767px) {
+	#introduction .coupleIntro .personOf:first-child {
+		border-right: none;
+	}
+}
+@media screen and (min-width: 670px) and (max-width: 719px) {
+	.paraContainer, .flexContainer, .title {		
+		margin-left: 3%;
+	}
+}
+@media screen and (max-width: 669px) {
+	.paraContainer, .flexContainer, .title {		
+		width: 60%;
+		margin-left: 5%;
+	}
+}
+@media screen and (min-width: 592px) and (max-width: 620px) {
+	.paraContainer, .flexContainer, .title {		
+		margin-left: 3%;
+	}
+	.title {
+		font-size: 28px;
+	}
+}
+@media screen and (max-width: 591px) {
+	.paraContainer, .flexContainer, .title {		
+		width: 60%;
+		margin-left: 2%;
+	}
+	.paraContent p {
+		width: 350px;
+	}
+}
+@media screen and (max-width: 550px) {
+	.paraContainer, .flexContainer, .title {		
+		width: 50%;
+		margin-left: 4%;
+	}
+}
+@media screen and (max-width: 500px) {
+	.paraContainer, .flexContainer, .title {		
+		margin-left: 2%;
+	}
+}
+@media screen and (max-width: 480px) {
+	.paraContainer, .flexContainer, .title {		
+		width: 40%;
+		margin-left: 5%;
+	}
+	.titleBorder::before{
+		display: none;
+	}
+}
+@media screen and (max-width:470px) {
+	.paraContainer, .flexContainer, .title {
+		width: 37%;
+	}
+}
+@media screen and (max-width: 450px) {
+	.paraContainer, .flexContainer, .title {
+		margin-left: 4%;
+	}
+	.paraContent .mainTitle {
+		font-size: 25px;
+	}
+	.paraContent .introName {
+		font-size: 25px;
+	}
+	.paraContent .introSubTitle {
+		font-size: 15px;
+	}
+	.paraContent p {
+		width: auto;
+	}
+}
+@media screen and (max-width: 400px) {
+	.paraContainer, .flexContainer, .title {		
+		margin-left: 2%;
+	}
+	.title {
+		font-size: 25px;
+	}
+}
+@media screen and (max-width: 370px) {
+	.paraContainer, .flexContainer, .title {	
+		width: 35%;
+		margin-left: 2%;
+	}
+}
+@media screen and (max-width: 340px) {
+	.paraContainer, .flexContainer, .title {	
+		width: 30%;
+		margin-left: 3%;
+	}
+}
+@media screen and (max-width: 320px) {
+	.paraContainer, .flexContainer, .title {	
+		width: 30%;
+		margin-left: 2%;
 	}
 }

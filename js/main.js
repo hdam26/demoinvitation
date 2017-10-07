@@ -1,5 +1,7 @@
 var scrolled = document.documentElement.scrollTop;
 var screenHeight = screen.height + 20;
+
+/* Function */
 var showElement = function(scrolled, elementId, screenHeight) {
 	console.log(screenHeight);
 	console.log(scrolled);
@@ -14,9 +16,8 @@ var showElement = function(scrolled, elementId, screenHeight) {
 			elementId.classList.remove('fadeIn');
 		}
 	}
-};
-
-var navbarBackground = function(scroll_start = 0) {
+},
+	navbarBackground = function(scroll_start = 0) {
 	var startPosition = $('.homeSlide');
 	var _offset = startPosition.offset();
 	if (startPosition.length) {
@@ -39,9 +40,8 @@ var navbarBackground = function(scroll_start = 0) {
 			}
 		});
 	}
-};
-
-var createCountdown = function(thedate) {
+},
+	createCountdown = function(thedate) {
 	var dateNow = new Date().getTime()/1000;
 	var theDay = new Date(thedate).getTime()/1000;
 	var toCount = theDay - dateNow;
@@ -72,6 +72,25 @@ function initMap() {
 	infoWindow.open(map, marker);
 }
 
+function changeStoryView() {
+	console.log('change View');
+	if (screen.width <= 575) {
+		var elem = document.getElementsByClassName('storyTextRight');
+		console.log(elem[0]);
+		var storyText = document.getElementsByClassName('storyText');
+		var addText = document.getElementsByClassName('additionalText');
+		for(var i = 0; i < elem.length; i++) {
+			elem[i].style.display = 'none';
+		}
+		for(var i = 0; i < addText.length; i++) {
+			addText[i].style.display = 'block';
+		}
+		for(var i = 0; i < storyText.length; i++) {
+			storyText[i].style.textAlign = 'center';
+		}
+	}
+}
+
 $(document).ready(function() {
 	/* window.onscroll = function () {
 		showElement(scrolled, document.getElementById('titleIntroduction'), screenHeight);
@@ -80,4 +99,6 @@ $(document).ready(function() {
 	navbarBackground(scrollStart);
 	createCountdown("November 10, 2017");
 	initMap();
+	changeStoryView();
+	window.onresize = changeStoryView();
 });

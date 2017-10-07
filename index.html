@@ -9,9 +9,10 @@
         <title>Demo - Wedding Invitation</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
+		<!--[if lte IE 9]>
+			<link href='css/vendor/animations-ie-fix.css' rel='stylesheet'>
+		<![endif]-->
+		<link rel='stylesheet' href='css/vendor/animations.css'>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/vendor/tether.min.css">
@@ -72,17 +73,17 @@
 		        	<div class="paraContainer">
 			    		<div class="paraContent">
 							<p class="mainTitle">The Wedding Celebration of</p>
-				    		<h2>Fulanah <span class="custAffectionately affectionatelyAnimate">*</span> Fulan</h2>
-							<h3 class="introSubTitle">Bandung</h3>
-							<p>DD-MM-YYYY</p>
+				    		<p class="introName">Fulanah <span class="custAffectionately affectionatelyAnimate">*</span> Fulan</p>
+							<p class="introSubTitle">Bandung</p>
+							<p class="introSubTitle">DD-MM-YYYY</p>
 			    		</div>
 		        	</div>
 	        	</div>
 		    </section>
 		    
 			<section id="introduction" class="descSection">
-				<div id="titleIntroduction" class="titleIntroduction titleBorder">
-					THE HAPPY COUPLE
+				<div id="titleIntroduction" class="titleIntroduction titleBorder title">
+					The Happy Couple
 				</div>
 				<div id="coupleIntro" class="coupleIntro flexContainer">
 					<div id="bridge" class="personOf col-md-6">
@@ -187,29 +188,34 @@
 			
 			<section id="coupleStory">
 				<div class="coupleStoryContainer">
-					<div id="titleStory" class="titleBorder">
-						OUR STORY
+					<div id="titleStory" class="titleBorder title">
+						Our Story
 					</div>
-					<div class="flexContainer storyContainer">
-						<div class="storyBox">
+					<div class="flexContainer storyContainer animatedParent" data-sequence='500'>
+						<div class="row storyBox odd animated fadeInDownShort slowest delay-300" data-id='1'>
 							<div class="col-md-5"></div>
-							<div class="storyPicContainer col-md-2">
+							<div class="storyPicContainer col-md-2 col-sm-4 col-12">
 								<img class="storyPic rounded-circle" src="img/flowers-garden-playing-pot.jpg"/>
 							</div>
-							<div class="storyText storyTextLeft col-md-5">
+							<div class="oddText storyText storyTextLeft col-md-5 col-sm-8 col-12">
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fringilla tempus orci. Donec faucibus ut nibh vel volutpat. Aliquam vitae mollis ipsum. Cras tristique, turpis nec posuere convallis, lorem ex vulputate metus, sodales hendrerit nisl leo nec ipsum. Donec sit amet sagittis dolor. Duis blandit ipsum nunc, sed molestie massa mattis feugiat. Proin vestibulum lacinia ante, at faucibus urna. Curabitur dignissim eros in libero tincidunt lacinia. In hac habitasse platea dictumst. Nulla molestie mi lorem. Pellentesque porttitor ex eget ante consectetur, tempus facilisis odio sodales. Maecenas at porta neque. Fusce ut felis consequat, cursus dui vel, sodales augue.
 								</p>
 							</div>
 						</div>
-						<div class="col-md-12 storyBox">
-							<div class="storyText storyTextRight col-md-5">
+						<div class="row storyBox even animated fadeInDownShort slowest delay-300" data-id='2'>
+							<div class="evenText storyText storyTextRight col-md-5 col-sm-8 col-12">
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fringilla tempus orci. Donec faucibus ut nibh vel volutpat. Aliquam vitae mollis ipsum. Cras tristique, turpis nec posuere convallis, lorem ex vulputate metus, sodales hendrerit nisl leo nec ipsum. Donec sit amet sagittis dolor. Duis blandit ipsum nunc, sed molestie massa mattis feugiat. Proin vestibulum lacinia ante, at faucibus urna. Curabitur dignissim eros in libero tincidunt lacinia. In hac habitasse platea dictumst. Nulla molestie mi lorem. Pellentesque porttitor ex eget ante consectetur, tempus facilisis odio sodales. Maecenas at porta neque. Fusce ut felis consequat, cursus dui vel, sodales augue.
 								</p>
 							</div>
-							<div class="storyPicContainer col-md-2">
+							<div class="storyPicContainer col-md-2 col-sm-4 col-12">
 								<img class="storyPic rounded-circle" src="img/flowers-garden-playing-pot.jpg"/>
+							</div>
+							<div class="additionalText storyText storyTextRight col-md-5 col-sm-8 col-12">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fringilla tempus orci. Donec faucibus ut nibh vel volutpat. Aliquam vitae mollis ipsum. Cras tristique, turpis nec posuere convallis, lorem ex vulputate metus, sodales hendrerit nisl leo nec ipsum. Donec sit amet sagittis dolor. Duis blandit ipsum nunc, sed molestie massa mattis feugiat. Proin vestibulum lacinia ante, at faucibus urna. Curabitur dignissim eros in libero tincidunt lacinia. In hac habitasse platea dictumst. Nulla molestie mi lorem. Pellentesque porttitor ex eget ante consectetur, tempus facilisis odio sodales. Maecenas at porta neque. Fusce ut felis consequat, cursus dui vel, sodales augue.
+								</p>
 							</div>
 							<div class="col-md-5"></div>
 						</div>
@@ -220,11 +226,11 @@
 			<section id="countdown" class="homeSlide">
 				<div class="bcg">
 			    	<div class="paraContainer">
-						<div id="titleCounter" class="titleBorder">
+						<div id="titleCounter" class="titleBorder title" style="width: auto;">
 							Countdown To The Day
 						</div>
 						<br/>
-						<div id="counterToDay" class="counterContainer">
+						<div id="counterToDay" class="counterContainer" style="font-size: 10px;">
 						</div>
 			    	</div>
 			    	
@@ -257,6 +263,7 @@
 		<script src="js/vendor/bootstrap.min.js"></script>
 		<script src="js/vendor/bootstrap.js"></script>
 		<script src="js/vendor/flipclock.min.js"></script>
+		<script src="js/vendor/css3-animate-it.js"></script>
         <script src="js/imagesloaded.js"></script>
         <script src="js/skrollr.js"></script>
         <script src="js/mainParallax.js"></script>
