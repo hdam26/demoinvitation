@@ -4,6 +4,7 @@
 		Mf Kind & Witty: mistifonts.com
 		Alex-Brush: 1001fonts.com
 		Inkcalig: 1001fonts.com
+		PrinsesstartaLightDEMO: 1001fonts.com
 	*/
 	
 @font-face {
@@ -22,7 +23,10 @@
 	font-family: Inkcalig;
 	src: url('../etc/Inkcalig.ttf');
 }
-
+@font-face {
+	font-family: PrinsesstartaLight;
+	src: url('../etc/PrinsesstartaLightDEMO.ttf');
+}
 	/* Typicons */
 @font-face {
 	font-family: 'typicons';
@@ -373,7 +377,7 @@ nav.navbar.navbar-light.navbar-toggleable-sm.bg-faded.justify-content-center.fix
 	color: #fff;
 }
 .storyOf, .storyText {
-	font-family: Inkcalig;
+	font-family: PrinsesstartaLight;
 }
 
 /* Misc */
@@ -748,6 +752,9 @@ nav.navbar.navbar-light.navbar-toggleable-sm.bg-faded.justify-content-center.fix
 	.paraContainer, .flexContainer, .title {		
 		margin-left: 2%;
 	}
+	iframe {
+		width: 470px;
+	}
 }
 @media screen and (max-width: 480px) {
 	.paraContainer, .flexContainer, .title {		
@@ -756,6 +763,9 @@ nav.navbar.navbar-light.navbar-toggleable-sm.bg-faded.justify-content-center.fix
 	}
 	.titleBorder::before{
 		display: none;
+	}
+	iframe {
+		width: 450px;
 	}
 }
 @media screen and (max-width:470px) {
@@ -779,6 +789,9 @@ nav.navbar.navbar-light.navbar-toggleable-sm.bg-faded.justify-content-center.fix
 	.paraContent p {
 		width: auto;
 	}
+	iframe {
+		width: 430px;
+	}
 }
 @media screen and (max-width: 400px) {
 	.paraContainer, .flexContainer, .title {		
@@ -787,17 +800,27 @@ nav.navbar.navbar-light.navbar-toggleable-sm.bg-faded.justify-content-center.fix
 	.title {
 		font-size: 25px;
 	}
+	iframe {
+		width: 380px;
+	}
 }
 @media screen and (max-width: 370px) {
 	.paraContainer, .flexContainer, .title {	
 		width: 35%;
 		margin-left: 2%;
 	}
+	iframe {
+		width: 350px;
+		height: 400px;
+	}
 }
 @media screen and (max-width: 340px) {
 	.paraContainer, .flexContainer, .title {	
 		width: 30%;
 		margin-left: 3%;
+	}
+	iframe {
+		width: 300px;
 	}
 }
 @media screen and (max-width: 320px) {
