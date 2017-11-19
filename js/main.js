@@ -3,8 +3,6 @@ var screenHeight = screen.height + 20;
 
 /* Function */
 var showElement = function(scrolled, elementId, screenHeight) {
-	console.log(screenHeight);
-	console.log(scrolled);
 	if (scrolled > screenHeight) {
 		elementId.classList.add('fadeIn');
 		if (elementId.classList.contains('fadeOut')) {
@@ -50,7 +48,6 @@ var showElement = function(scrolled, elementId, screenHeight) {
 		countdown: true	
 	}); */
 	var targetDate = new Date(thedate).getTime();
-	console.log(targetDate);
 	var _container = document.getElementById(container);
 	var days, hours, minutes, seconds;
 	setInterval(function() {
@@ -72,10 +69,8 @@ var showElement = function(scrolled, elementId, screenHeight) {
 };
 
 function changeStoryView() {
-	console.log('change View');
 	if (screen.width <= 575) {
 		var elem = document.getElementsByClassName('storyTextRight');
-		console.log(elem[0]);
 		var storyText = document.getElementsByClassName('storyText');
 		var addText = document.getElementsByClassName('additionalText');
 		for(var i = 0; i < elem.length; i++) {
@@ -94,8 +89,6 @@ $(document).ready(function() {
 	/* window.onscroll = function () {
 		showElement(scrolled, document.getElementById('titleIntroduction'), screenHeight);
 	} */
-	var mapFrame = document.getElementById('weddingLocation');
-	
 	var scrollStart = 0;
 	navbarBackground(scrollStart);
 	createCountdown("Dec, 17, 2017", 'counterToDay');

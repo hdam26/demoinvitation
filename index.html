@@ -240,17 +240,17 @@
 						<div id="titleRSVP" class="titleBorder">
 							RSVP
 						</div>
-		    			<div class="text-center embed-responsive embed-responsive-16by9" style="margin-top: 50px; height:500px;">
-							<iframe class="embed-responsive-item" height="450" src="https://docs.google.com/forms/d/e/1FAIpQLSc55o5_LC5jC_ZG9tpuhXuhrVDQf8CD5bgJnjl874HkvIyaMg/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+		    			<div class="text-center embed-responsive embed-responsive-16by9" style="margin-top: 50px; height:450px;">
+							<iframe class="embed-responsive-item" src="https://docs.google.com/forms/d/e/1FAIpQLSc55o5_LC5jC_ZG9tpuhXuhrVDQf8CD5bgJnjl874HkvIyaMg/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 						</div>
 			    	</div>
 			    	
 			    </div>
 			</section>
 			
-			<section id="location">
+			<section id="location" class="row">
 				<!-- <div id="map" style="height: 450px;"></div> -->
-				<div class="row">
+				<div class="col-md-12 col-sm-6 col-xs-8">
 					<iframe id="weddingLocation"
 					  height="450"
 					  frameborder="0" style="border:0"
@@ -272,42 +272,6 @@
         <script src="js/imagesloaded.js"></script>
         <script src="js/skrollr.js"></script>
         <script src="js/mainParallax.js"></script>
-		<script>
-			var map;
-			function initMap() {
-				var place = {
-						lat: -6.893686,
-						lng: 107.6090294
-					};
-				map = new google.maps.Map(document.getElementById('map'), {
-					zoom: 15,
-					center: place
-				});
-				var marker = new google.maps.Marker({
-					position: place,
-					map: map
-				});
-				
-				var detailLocation = '<div><p style="color: black; font-weight: bold;">Masjid Salman ITB</p>' + 
-									 '<p style="color: black;">Place we will get married</p></div>';
-				
-				var infoWindow = new google.maps.InfoWindow({content: detailLocation});
-				infoWindow.open(map, marker);
-			}
-			google.maps.event.addDomListener(window, 'load', initialize);
-			google.maps.event.addDomListener(window, "resize", function() {
-				var center = map.getCenter();
-				google.maps.event.trigger(map, "resize");
-				map.setCenter(center); 
-			});
-			window.onresize = function() {
-				changeStoryView();
-			}
-		</script>
-		<script async defer
-			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlxqggWsLhVuFv7PTIhicCG5T3zNwcc8U&callback=initMap">
-		</script>
-
     </body>
 	<footer class="text-center" style="background-color: #daaea1; color: #fff; height: 50px; padding-top: 13px;">
 		Ganiya <span class="typcn typcn-heart-full-outline"></span> Hafizh
