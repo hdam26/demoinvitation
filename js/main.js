@@ -41,14 +41,34 @@ var showElement = function(scrolled, elementId, screenHeight) {
 		});
 	}
 },
-	createCountdown = function(thedate) {
-	var dateNow = new Date().getTime()/1000;
+	createCountdown = function(thedate, container) {
+	/* var dateNow = new Date().getTime()/1000;
 	var theDay = new Date(thedate).getTime()/1000;
 	var toCount = theDay - dateNow;
 	var counter = $('#counterToDay').FlipClock(toCount, {
 		clockFace: 'DailyCounter',
 		countdown: true	
-	});
+	}); */
+	var targetDate = new Date(thedate).getTime();
+	console.log(targetDate);
+	var _container = document.getElementById(container);
+	var days, hours, minutes, seconds;
+	setInterval(function() {
+		var now = new Date().getTime(),
+			secondsLeft = (targetDate - now) / 1000;
+		days = parseInt(secondsLeft / 86400);
+		secondsLeft = (secondsLeft % 86400);
+		
+		hours = parseInt(secondsLeft / 3600);
+		secondsLeft = (secondsLeft % 3600);
+		
+		minutes = parseInt(secondsLeft / 60);
+		seconds = parseInt(secondsLeft % 60);
+	_container.innerHTML =  '<span class="days timer"> <b>' + days + ' :&nbsp;</b> </span>' +
+							'<span class="hours timer"> <b> ' + hours + ' :&nbsp;</b> </span>' +
+							'<span class="minutes timer"> <b> ' + minutes + ' :&nbsp;</b> </span>' +
+							'<span class="seconds timer"> <b> ' + seconds + '</b> </span>';
+	}, 1000);
 };
 
 function changeStoryView() {
@@ -74,8 +94,10 @@ $(document).ready(function() {
 	/* window.onscroll = function () {
 		showElement(scrolled, document.getElementById('titleIntroduction'), screenHeight);
 	} */
+	var mapFrame = document.getElementById('weddingLocation');
+	
 	var scrollStart = 0;
 	navbarBackground(scrollStart);
-	createCountdown("November 10, 2017");
+	createCountdown("Dec, 17, 2017", 'counterToDay');
 	changeStoryView();
 });

@@ -487,7 +487,10 @@ nav.navbar.navbar-light.navbar-toggleable-sm.bg-faded.justify-content-center.fix
 	margin: auto;
 	width: 80%;	
 }
-	
+
+.timer {
+	font-size: 50px;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
