@@ -140,6 +140,13 @@ body {
 .no-js {
 	padding-top: 106px;
 }
+
+.navbar.custNavbar {
+	background-color: transparent;
+    box-shadow: none;
+    max-height: 70px;
+}
+
 h2 {
 	margin-top: 0;
 }
@@ -269,7 +276,8 @@ section{
 
 	/* Slide 1 */
 #introSlide .bcg {
-	background-image:url('../img/wedding-ring.jpg')
+	background-image:url('../img/wedding-ring.jpg');
+	color: #e6e6e6;
 }
 #introSlide .hsContent {
 	bottom: 200px;
@@ -288,10 +296,37 @@ section{
 	top: auto;
 }
 
+	/* Wedding Day */
+#introEvent {
+	height: 450px !important;
+}
+#introEvent .bcg{
+	background-image: url('../img/bucket-of-flowers.jpg');
+}
+#introEvent .paraContent {
+	color: #ededed;
+    padding: 10px;
+    background-color: rgba(4,5,5,0.2);
+}
+#introEvent .subEvent .odd{
+	text-align: right;
+	border-right: 1px dashed #404040;
+}
+#introEvent .subEvent .even{
+	text-align: left;
+}
+
+@media only screen and (max-width: 575px) {
+    #introEvent .subEvent .odd, #introEvent .subEvent .even{
+		text-align: center;
+		border: none;
+	}
+}
+
 	/* Counter */
 #countdown {
 	text-align: center;
-	height: 450px !important;
+	height: 300px !important;
 }
 #countdown .bcg {background-image:url('../img/watch-ring-min.jpeg')}
 .counterContainer {
@@ -303,7 +338,12 @@ section{
 }
 
 	/* Slide 4 */
-#rsvp .bcg {background-image:url('../img/wedding-stage.jpeg')}
+#rsvp {
+	height: 600px !important;
+}
+#rsvp .bcg {
+	background-image:url('../img/wedding-stage.jpeg');
+}
 
 	/* Story Container */
 .coupleStoryContainer {
@@ -489,7 +529,7 @@ nav.navbar.navbar-light.navbar-toggleable-sm.bg-faded.justify-content-center.fix
 }
 
 .timer {
-	font-size: 50px;
+	font-size: 40px;
 }
 /* ==========================================================================
    Helper classes

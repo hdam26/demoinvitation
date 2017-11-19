@@ -24,7 +24,6 @@ var showElement = function(scrolled, elementId, screenHeight) {
 			if (scroll_start > _offset.top) {
 				$('.navbar.fixed-top').css('background-color', '#fff');
 				$('.navbar.fixed-top').css('box-shadow', '2px 2px 5px #888888');
-				$('.navbar.fixed-top').css('max-height', '60px');
 				$('.navbar .navbar-brand').css('color', '#DAAEA1');
 				$('.navbar .navbar-brand').css('font-size', '30px');
 				$('.navbar .nav-link').css('color', '#DAAEA1');
@@ -40,13 +39,6 @@ var showElement = function(scrolled, elementId, screenHeight) {
 	}
 },
 	createCountdown = function(thedate, container) {
-	/* var dateNow = new Date().getTime()/1000;
-	var theDay = new Date(thedate).getTime()/1000;
-	var toCount = theDay - dateNow;
-	var counter = $('#counterToDay').FlipClock(toCount, {
-		clockFace: 'DailyCounter',
-		countdown: true	
-	}); */
 	var targetDate = new Date(thedate).getTime();
 	var _container = document.getElementById(container);
 	var days, hours, minutes, seconds;
@@ -61,14 +53,17 @@ var showElement = function(scrolled, elementId, screenHeight) {
 		
 		minutes = parseInt(secondsLeft / 60);
 		seconds = parseInt(secondsLeft % 60);
+		
+		hours = addDigit(hours);
+		minutes = addDigit(minutes);
+		seconds = addDigit(seconds);
+		
 	_container.innerHTML =  '<span class="days timer"> <b>' + days + ' :&nbsp;</b> </span>' +
 							'<span class="hours timer"> <b> ' + hours + ' :&nbsp;</b> </span>' +
 							'<span class="minutes timer"> <b> ' + minutes + ' :&nbsp;</b> </span>' +
 							'<span class="seconds timer"> <b> ' + seconds + '</b> </span>';
 	}, 1000);
-};
-
-function changeStoryView() {
+}, changeStoryView = function() {
 	if (screen.width <= 575) {
 		var elem = document.getElementsByClassName('storyTextRight');
 		var storyText = document.getElementsByClassName('storyText');
@@ -83,13 +78,16 @@ function changeStoryView() {
 			storyText[i].style.textAlign = 'center';
 		}
 	}
-}
-
-function changeMapSize() {
+}, changeMapSize = function() {
 	var mapLocation = $('iframe#weddingLocation')
 	mapLocation.width(window.innerWidth);
 	console.log(mapLocation.width(window.innerWidth));
-}
+}, addDigit = function(value) {
+	if (value < 10) {
+		value = '0' + value;
+	}
+	return value;
+};
 
 $(document).ready(function() {
 	/* window.onscroll = function () {
