@@ -85,11 +85,21 @@ function changeStoryView() {
 	}
 }
 
+function changeMapSize() {
+	var mapLocation = $('iframe#weddingLocation')
+	mapLocation.width(window.innerWidth);
+	console.log(mapLocation.width(window.innerWidth));
+}
+
 $(document).ready(function() {
 	/* window.onscroll = function () {
 		showElement(scrolled, document.getElementById('titleIntroduction'), screenHeight);
 	} */
 	var scrollStart = 0;
+	changeMapSize();
+	$(window).resize(function() {
+		changeMapSize();
+	});
 	navbarBackground(scrollStart);
 	createCountdown("Dec, 17, 2017", 'counterToDay');
 	changeStoryView();

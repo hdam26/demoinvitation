@@ -471,10 +471,6 @@ nav.navbar.navbar-light.navbar-toggleable-sm.bg-faded.justify-content-center.fix
 	animation: fadeOut .3s ease-in 1 forwards;
 }
 
-iframe#weddingLocation {
-	width: inherit;
-}
-
 /* ==========================================================================
    Flex classes
    ========================================================================== */
@@ -759,9 +755,6 @@ iframe#weddingLocation {
 	.paraContainer, .flexContainer, .title {		
 		margin-left: 2%;
 	}
-	iframe {
-		width: 470px;
-	}
 }
 @media screen and (max-width: 480px) {
 	.paraContainer, .flexContainer, .title {		
@@ -770,9 +763,6 @@ iframe#weddingLocation {
 	}
 	.titleBorder::before{
 		display: none;
-	}
-	iframe {
-		width: 450px;
 	}
 }
 @media screen and (max-width:470px) {
@@ -796,9 +786,6 @@ iframe#weddingLocation {
 	.paraContent p {
 		width: auto;
 	}
-	iframe {
-		width: 430px;
-	}
 }
 @media screen and (max-width: 400px) {
 	.paraContainer, .flexContainer, .title {		
@@ -807,27 +794,17 @@ iframe#weddingLocation {
 	.title {
 		font-size: 25px;
 	}
-	iframe {
-		width: 380px;
-	}
 }
 @media screen and (max-width: 370px) {
 	.paraContainer, .flexContainer, .title {	
 		width: 35%;
 		margin-left: 2%;
 	}
-	iframe {
-		width: 350px;
-		height: 400px;
-	}
 }
 @media screen and (max-width: 340px) {
 	.paraContainer, .flexContainer, .title {	
 		width: 30%;
 		margin-left: 3%;
-	}
-	iframe {
-		width: 300px;
 	}
 }
 @media screen and (max-width: 320px) {
